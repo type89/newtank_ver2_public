@@ -1,0 +1,12 @@
+ [Unit]
+ Description=tank start
+ After=ssh.service
+ 
+ [Service]
+ Type=oneshot
+ WorkingDirectory=/home/pi/work/webiopi/
+ ExecStart=/home/pi/work/webiopi/tank_start.sh
+ TimeoutStopSec=5
+ 
+ [Install]
+ WantedBy = multi-user.target
